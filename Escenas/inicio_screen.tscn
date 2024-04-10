@@ -1,0 +1,323 @@
+[gd_scene load_steps=44 format=3 uid="uid://b83wsc4wp2caq"]
+
+[ext_resource type="Script" path="res://Escenas/InicioScreen.gd" id="1_562r7"]
+[ext_resource type="Texture2D" uid="uid://c3o8e4l3a26xk" path="res://Sprites PI/Fondo-inicios.png" id="2_5d1l0"]
+[ext_resource type="Texture2D" uid="uid://b5mft8ccttweo" path="res://Sprites PI/panel1.png" id="2_cluen"]
+[ext_resource type="Texture2D" uid="uid://bhiif1ggtfqhs" path="res://Sprites PI/VGeksLogo.png" id="3_2on0c"]
+[ext_resource type="Texture2D" uid="uid://c4t00eniwnw0c" path="res://Sprites PI/FondoSeleccionN.png" id="4_ub5uy"]
+[ext_resource type="Texture2D" uid="uid://kfunruf7j0b1" path="res://Sprites PI/PlanetaMorado.png" id="5_2unsd"]
+[ext_resource type="Texture2D" uid="uid://cqo1883acuqyn" path="res://Sprites PI/PlanetaFuego.png" id="6_oeudo"]
+[ext_resource type="Texture2D" uid="uid://c8vhi7ejk41mp" path="res://Sprites PI/PlanetaAzul.png" id="7_sw7ot"]
+[ext_resource type="Texture2D" uid="uid://cch1fx05bvd45" path="res://Sprites PI/PlanetaLava.png" id="8_wody2"]
+[ext_resource type="Texture2D" uid="uid://dw8tiu5fl1m27" path="res://Sprites PI/PlanetaRosa.png" id="9_531hw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_knwvp"]
+atlas = ExtResource("2_5d1l0")
+region = Rect2(0, 0, 240, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f71i7"]
+atlas = ExtResource("2_5d1l0")
+region = Rect2(0, 160, 240, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2iq5n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_knwvp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f71i7")
+}],
+"loop": true,
+"name": &"Inicio",
+"speed": 2.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oel0h"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3hbcm"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e05x8"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b7jqk"]
+bg_color = Color(0, 0.6, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bjnpu"]
+bg_color = Color(0, 0.372549, 0.0941176, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x4oja"]
+bg_color = Color(0, 0.858824, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_efuy5"]
+bg_color = Color(0, 0.254902, 0.764706, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4i3r5"]
+bg_color = Color(0, 0.12549, 0.568627, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kdpxi"]
+bg_color = Color(0.0352941, 0.0941176, 0.988235, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bfkg1"]
+bg_color = Color(0.784314, 0.152941, 0.172549, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ya1n4"]
+bg_color = Color(0.6, 0.0431373, 0.0431373, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o65u4"]
+bg_color = Color(0.6, 0.517647, 0.517647, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hj22b"]
+bg_color = Color(0.784314, 0.152941, 0.172549, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ky0j"]
+bg_color = Color(0.6, 0.0431373, 0.0431373, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qgtv6"]
+bg_color = Color(0.6, 0.517647, 0.517647, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3peqh"]
+texture = ExtResource("5_2unsd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_86mq4"]
+texture = ExtResource("5_2unsd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lvick"]
+texture = ExtResource("5_2unsd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_da2r5"]
+texture = ExtResource("6_oeudo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ewjak"]
+texture = ExtResource("6_oeudo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nwo54"]
+texture = ExtResource("6_oeudo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v7dyy"]
+texture = ExtResource("7_sw7ot")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lq32f"]
+texture = ExtResource("7_sw7ot")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_edwli"]
+texture = ExtResource("7_sw7ot")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c8ba3"]
+texture = ExtResource("8_wody2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e8bcb"]
+texture = ExtResource("8_wody2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bfv5l"]
+texture = ExtResource("8_wody2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_032to"]
+texture = ExtResource("9_531hw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gm3k4"]
+texture = ExtResource("9_531hw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v3of2"]
+texture = ExtResource("9_531hw")
+
+[node name="InicioScreen" type="CanvasLayer"]
+script = ExtResource("1_562r7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(576, 381)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_2iq5n")
+animation = &"Inicio"
+autoplay = "Inicio"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1044, 536)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_2on0c")
+
+[node name="COMENZAR" type="Button" parent="."]
+show_behind_parent = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -608.0
+offset_top = -353.0
+offset_right = 598.0
+offset_bottom = 352.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_oel0h")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3hbcm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_e05x8")
+text = "Toca la pantalla o pulsa
+ la tecla Enter para iniciar"
+
+[node name="MenuInicio" type="Node2D" parent="."]
+
+[node name="Panel1" type="Sprite2D" parent="MenuInicio"]
+position = Vector2(575, 308.5)
+scale = Vector2(4, 4)
+texture = ExtResource("2_cluen")
+
+[node name="INICIAR" type="Button" parent="MenuInicio"]
+offset_left = 500.0
+offset_top = 153.0
+offset_right = 650.0
+offset_bottom = 203.0
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_b7jqk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bjnpu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_x4oja")
+text = "INICIAR"
+
+[node name="ELEGIR NIVEL" type="Button" parent="MenuInicio"]
+offset_left = 495.0
+offset_top = 284.0
+offset_right = 659.0
+offset_bottom = 334.0
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_efuy5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4i3r5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kdpxi")
+text = "SELECCIONAR NIVEL"
+
+[node name="PERSONALIZACIÓN" type="Button" parent="MenuInicio"]
+visible = false
+offset_left = 1269.0
+offset_top = 528.0
+offset_right = 1425.0
+offset_bottom = 578.0
+size_flags_horizontal = 4
+text = "PERSONALIZACIÓN"
+
+[node name="SALIR" type="Button" parent="MenuInicio"]
+offset_left = 500.0
+offset_top = 420.0
+offset_right = 650.0
+offset_bottom = 470.0
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_bfkg1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ya1n4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_o65u4")
+text = "SALIR"
+
+[node name="SelectLevelsMenu" type="Node2D" parent="."]
+
+[node name="FondoM" type="Sprite2D" parent="SelectLevelsMenu"]
+position = Vector2(591, 241)
+scale = Vector2(3, 3)
+texture = ExtResource("4_ub5uy")
+
+[node name="regresar" type="Button" parent="SelectLevelsMenu"]
+offset_right = 105.0
+offset_bottom = 50.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_hj22b")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0ky0j")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qgtv6")
+text = "Regresar"
+
+[node name="bnivel1" type="Button" parent="SelectLevelsMenu"]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 506.0
+offset_top = 230.0
+offset_right = 698.0
+offset_bottom = 423.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_3peqh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_86mq4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_lvick")
+
+[node name="bnivel2" type="Button" parent="SelectLevelsMenu"]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 772.0
+offset_top = 236.0
+offset_right = 967.0
+offset_bottom = 412.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_da2r5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ewjak")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_nwo54")
+
+[node name="bnivel3" type="Button" parent="SelectLevelsMenu"]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 241.0
+offset_top = 236.0
+offset_right = 441.0
+offset_bottom = 414.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_v7dyy")
+theme_override_styles/hover = SubResource("StyleBoxTexture_lq32f")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_edwli")
+
+[node name="bnivel4" type="Button" parent="SelectLevelsMenu"]
+visible = false
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 1218.0
+offset_top = 106.0
+offset_right = 1435.0
+offset_bottom = 291.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_c8ba3")
+theme_override_styles/hover = SubResource("StyleBoxTexture_e8bcb")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_bfv5l")
+text = "Nivel 4"
+
+[node name="bnivel5" type="Button" parent="SelectLevelsMenu"]
+visible = false
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 1222.0
+offset_top = 363.0
+offset_right = 1432.0
+offset_bottom = 555.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_032to")
+theme_override_styles/hover = SubResource("StyleBoxTexture_gm3k4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_v3of2")
+text = "Nivel 5"
+
+[node name="Label" type="Label" parent="SelectLevelsMenu"]
+offset_left = 330.0
+offset_top = 96.0
+offset_right = 890.0
+offset_bottom = 182.0
+theme_override_font_sizes/font_size = 60
+text = "Selecciona un nivel"
+
+[connection signal="pressed" from="COMENZAR" to="." method="_on_comenzar_pressed"]
+[connection signal="pressed" from="MenuInicio/INICIAR" to="." method="_on_iniciar_pressed"]
+[connection signal="pressed" from="MenuInicio/ELEGIR NIVEL" to="." method="_on_elegir_nivel_pressed"]
+[connection signal="pressed" from="MenuInicio/PERSONALIZACIÓN" to="." method="_on_personalización_pressed"]
+[connection signal="pressed" from="MenuInicio/SALIR" to="." method="_on_salir_pressed"]
+[connection signal="pressed" from="SelectLevelsMenu/regresar" to="." method="_on_regresar_pressed"]
+[connection signal="pressed" from="SelectLevelsMenu/bnivel1" to="." method="_on_bnivel_1_pressed"]
+[connection signal="pressed" from="SelectLevelsMenu/bnivel2" to="." method="_on_bnivel_2_pressed"]
+[connection signal="pressed" from="SelectLevelsMenu/bnivel3" to="." method="_on_bnivel_3_pressed"]
+[connection signal="pressed" from="SelectLevelsMenu/bnivel4" to="." method="_on_bnivel_4_pressed"]
+[connection signal="pressed" from="SelectLevelsMenu/bnivel5" to="." method="_on_bnivel_5_pressed"]

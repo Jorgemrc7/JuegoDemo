@@ -1,0 +1,88 @@
+[gd_scene load_steps=11 format=3 uid="uid://c68126dg4jwrr"]
+
+[ext_resource type="Texture2D" uid="uid://cm1upc7kedq1g" path="res://Sprites PI/Disparo.png" id="1_j81wv"]
+[ext_resource type="Script" path="res://Escenas/disparo.gd" id="1_v5qbh"]
+[ext_resource type="Texture2D" uid="uid://xrkbx7yyd4ln" path="res://Sprites PI/Disparo-choque.png" id="3_l0i38"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1coey"]
+atlas = ExtResource("1_j81wv")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_owaeb"]
+atlas = ExtResource("1_j81wv")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2y6on"]
+atlas = ExtResource("1_j81wv")
+region = Rect2(0, 0, 64, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_81du7"]
+atlas = ExtResource("3_l0i38")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2xyv"]
+atlas = ExtResource("3_l0i38")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uyyrd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1coey")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_owaeb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2y6on")
+}],
+"loop": true,
+"name": &"die",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_81du7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2xyv")
+}],
+"loop": false,
+"name": &"die-shoot",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u7w6s"]
+size = Vector2(4, 5)
+
+[node name="disparo" type="Node2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_v5qbh")
+
+[node name="balasprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_uyyrd")
+animation = &"die-shoot"
+autoplay = "default"
+frame_progress = 1.0
+
+[node name="hitbox" type="Area2D" parent="." groups=["disparos"]]
+collision_layer = 17
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(4, -0.5)
+shape = SubResource("RectangleShape2D_u7w6s")
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 0.3
+one_shot = true
+
+[connection signal="animation_finished" from="balasprite" to="." method="_on_balasprite_animation_finished"]
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

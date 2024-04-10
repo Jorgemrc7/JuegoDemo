@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://cs5ecniefm81e"]
+
+[ext_resource type="Texture2D" uid="uid://c0og8tih4qbpe" path="res://Sprites PI/jugador1.png" id="1_dxhbl"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_8nbc1"]
+blend_mode = 1
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_jkc3d"]
+lifetime_randomness = 0.25
+particle_flag_disable_z = true
+direction = Vector3(-1, 0, 0)
+spread = 0.0
+gravity = Vector3(0, 10, 0)
+initial_velocity_min = 908.71
+initial_velocity_max = 908.71
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+angle_min = -40.0
+angle_max = -40.0
+scale_min = 2.0
+scale_max = 2.0
+color = Color(1, 1, 1, 0.623529)
+hue_variation_min = 0.4
+hue_variation_max = 1.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gpkc3"]
+atlas = ExtResource("1_dxhbl")
+region = Rect2(208.465, 385.459, 36.5865, 63.0794)
+
+[node name="GPUParticles2D" type="GPUParticles2D"]
+material = SubResource("CanvasItemMaterial_8nbc1")
+amount = 9
+process_material = SubResource("ParticleProcessMaterial_jkc3d")
+texture = SubResource("AtlasTexture_gpkc3")
+lifetime = 0.3

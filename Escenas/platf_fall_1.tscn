@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://mhb8cn1khb88"]
+
+[ext_resource type="Texture2D" uid="uid://cl8v5mowuvnst" path="res://Sprites PI/Brown Off.png" id="1_ccr1r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5e4my"]
+size = Vector2(29, 5)
+
+[node name="Platf_fall1" type="AnimatableBody2D"]
+scale = Vector2(3, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ccr1r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_5e4my")

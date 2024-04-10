@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://drdojajv5yhma"]
+
+[ext_resource type="PackedScene" uid="uid://b2484pjm6les7" path="res://Escenas/base_nivel_4.tscn" id="1_25rhv"]
+[ext_resource type="PackedScene" uid="uid://ce3vbk5dwlguk" path="res://Escenas/jugador.tscn" id="2_4m4j7"]
+[ext_resource type="PackedScene" uid="uid://brqlwhlevq2ud" path="res://Escenas/PlayerInfo.tscn" id="3_ckttf"]
+
+[node name="nivel_4" type="Node2D"]
+
+[node name="BaseNivel4" parent="." instance=ExtResource("1_25rhv")]
+
+[node name="Jugador" parent="." instance=ExtResource("2_4m4j7")]
+
+[node name="PlayerInfo" parent="." instance=ExtResource("3_ckttf")]

@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://csmdbitsop0vj"]
+
+[ext_resource type="Script" path="res://Screens/Final_screen.gd" id="1_eopdy"]
+[ext_resource type="Texture2D" uid="uid://snevm8g3buxy" path="res://Sprites PI/Felicitaciones.png" id="2_2hped"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ajc34"]
+bg_color = Color(0.784314, 0.152941, 0.172549, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0v13b"]
+bg_color = Color(0.6, 0.0431373, 0.0431373, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sl8o0"]
+bg_color = Color(0.6, 0.517647, 0.517647, 1)
+
+[node name="Final_screen" type="CanvasLayer"]
+script = ExtResource("1_eopdy")
+
+[node name="Felicitaciones" type="Sprite2D" parent="."]
+position = Vector2(575.5, 337.5)
+scale = Vector2(4.76953, 2.73047)
+texture = ExtResource("2_2hped")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -271.5
+offset_top = 121.0
+offset_right = 271.5
+offset_bottom = 193.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 50
+text = "! GRACIAS POR JUGAR !"
+
+[node name="Salir" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = 82.0
+offset_right = 75.0
+offset_bottom = 132.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ajc34")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0v13b")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sl8o0")
+text = "SALIR"
+
+[connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]

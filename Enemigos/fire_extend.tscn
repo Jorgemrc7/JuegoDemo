@@ -1,0 +1,82 @@
+[gd_scene load_steps=11 format=3 uid="uid://7farq8gejyw6"]
+
+[ext_resource type="Texture2D" uid="uid://dckiunr7nlt8y" path="res://Sprites PI/FuegoExt.png" id="1_e310r"]
+[ext_resource type="Script" path="res://Enemigos/fire_extend.gd" id="1_supte"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sseh5"]
+atlas = ExtResource("1_e310r")
+region = Rect2(0, 0, 128, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_duk5p"]
+atlas = ExtResource("1_e310r")
+region = Rect2(128, 0, 128, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8mpuu"]
+atlas = ExtResource("1_e310r")
+region = Rect2(256, 0, 128, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0e3yx"]
+atlas = ExtResource("1_e310r")
+region = Rect2(384, 0, 128, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_snpcr"]
+atlas = ExtResource("1_e310r")
+region = Rect2(512, 0, 128, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eend8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sseh5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_duk5p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8mpuu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0e3yx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_snpcr")
+}],
+"loop": true,
+"name": &"fire",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5nhw2"]
+size = Vector2(347.25, 12.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mh6bx"]
+size = Vector2(341.25, 27.3125)
+
+[node name="FireExtend" type="CharacterBody2D"]
+collision_layer = 18
+script = ExtResource("1_supte")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_eend8")
+animation = &"fire"
+autoplay = "fire"
+frame_progress = 0.305883
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.375, 41.625)
+shape = SubResource("RectangleShape2D_5nhw2")
+
+[node name="damageZone" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="damageZone"]
+position = Vector2(0.5, 42.8125)
+shape = SubResource("RectangleShape2D_mh6bx")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="damageZone"]
+position = Vector2(0.375, 20.6563)
+shape = SubResource("RectangleShape2D_mh6bx")
+
+[connection signal="area_entered" from="damageZone" to="." method="_on_damage_zone_area_entered"]

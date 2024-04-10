@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cytabnev5jnp2"]
+
+[ext_resource type="Script" path="res://Escenas/moving_platform_1.gd" id="1_lvnlw"]
+[ext_resource type="Texture2D" uid="uid://chdayinkkjr84" path="res://Sprites PI/s_pisometal.png" id="1_p4jv6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_btp6m"]
+size = Vector2(153, 64)
+
+[node name="platf-mov" type="AnimatableBody2D"]
+script = ExtResource("1_lvnlw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(45.5, 0)
+shape = SubResource("RectangleShape2D_btp6m")
+
+[node name="SPisometal" type="Sprite2D" parent="."]
+position = Vector2(45, 0)
+scale = Vector2(2.40625, 1)
+texture = ExtResource("1_p4jv6")
